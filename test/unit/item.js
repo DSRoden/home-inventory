@@ -75,10 +75,35 @@ describe('Item', function() {
         });
       });
     });
-   });
- });
-    
 
+  describe('#value', function(){
+    it('should find the total value of an item', function(){
+    var couch = new Item('couch', 'den', '3/4/2009',' 2','500');
+    var value = couch.value();
+    expect(value).to.equal(1000);
+    });
+  });
+
+  describe('value', function () {
+    it('should find the total value of all items', function(done){
+    var couch = new Item('couch', 'den', '3/4/2009',' 2','500');
+    var chair = new Item('chair', 'den', '3/4/2009',' 2','500');
+    var bed = new Item('bed', 'den', '3/4/2009',' 2','500');
+    bed.save(function(){
+        chair.save(function(){
+          couch.save(function(){
+             Item.totalValue({room: 'den'}, function (value){
+                expect(value).to.be.a('number');
+                done();
+             });
+            });
+           });
+         });
+       });
+      });
+    
+  });
+});
 
     
 
