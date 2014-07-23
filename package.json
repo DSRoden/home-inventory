@@ -1,0 +1,34 @@
+{
+  "name": "home-inventory",
+  "version": "0.0.0",
+  "description": "Home inventory",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DSRoden/home-inventory"
+  },
+  "author": "DSRoden",
+  "contributors": "Mark Supalla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DSRoden/home-inventory/issues"
+  },
+  "homepage": "https://github.com/DSRoden/home-inventory",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "mongodb": "^1.4.7",
+    "request": "^2.38.0",
+    "sync-prompt": "^0.4.1"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "jshint-stylish": "^0.4.0",
+    "mocha": "^1.20.1"
+  }
+}
